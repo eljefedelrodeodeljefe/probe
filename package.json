@@ -1,0 +1,32 @@
+{
+  "name": "probe",
+  "version": "0.1.0",
+  "description": "Ping and probe stuff.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape 'test/**/*.spec.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eljefedelrodeodeljefe/probe.git"
+  },
+  "keywords": [
+    "probe",
+    "ping",
+    "uptime",
+    "check"
+  ],
+  "author": "Robert Jefe Lindstaedt <robert.lindstaedt@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eljefedelrodeodeljefe/probe/issues"
+  },
+  "homepage": "https://github.com/eljefedelrodeodeljefe/probe#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "node-schedule": "^1.2.0"
+  }
+}

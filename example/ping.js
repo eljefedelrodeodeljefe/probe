@@ -2,7 +2,8 @@ const Ping = require('../').Ping
 
 const config = {
   host: 'google.com',
-  path:'/'
+  path:'/',
+  timeout: 20
 }
 
 const expectResponse = {

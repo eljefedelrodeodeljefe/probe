@@ -22,7 +22,7 @@ test('Can make simple http call', (t) => {
 })
 
 test('should not follow redirect and instead return the statuscode', (t) => {
-  t.plan(3)
+  t.plan(2)
   const config = {
     host: 'google.com',
     path:'/',
@@ -36,7 +36,6 @@ test('should not follow redirect and instead return the statuscode', (t) => {
     }
 
     t.ok(req.expect({ code: 302 }))
-    t.equals(req._isHttps, false)
     t.pass()
     t.end()
   })

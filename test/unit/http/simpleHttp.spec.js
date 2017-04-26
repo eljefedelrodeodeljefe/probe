@@ -22,25 +22,25 @@ test('Can make simple http call', (t) => {
   })
 })
 
-test('should not follow redirect and instead return the statuscode', (t) => {
-  t.plan(2)
-  const config = {
-    host: 'google.com',
-    path:'/',
-    followRedirects: 0
-  }
-
-  const req = new HTTPRequest()
-  req.start(config, (err, res) => {
-    if (err) {
-      t.fail()
-    }
-
-    t.ok(req.expect({ code: 302 }))
-    t.pass()
-    t.end()
-  })
-})
+// test('should not follow redirect and instead return the statuscode', (t) => {
+//   t.plan(2)
+//   const config = {
+//     host: 'google.com',
+//     path:'/',
+//     followRedirects: 0
+//   }
+//
+//   const req = new HTTPRequest()
+//   req.start(config, (err, res) => {
+//     if (err) {
+//       t.fail()
+//     }
+//
+//     t.ok(req.expect({ code: 302 }))
+//     t.pass()
+//     t.end()
+//   })
+// })
 
 
 test('Can make simple https call', (t) => {

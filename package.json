@@ -24,6 +24,7 @@
   "homepage": "https://github.com/eljefedelrodeodeljefe/probe#readme",
   "devDependencies": {
     "nodemon": "^1.11.0",
+    "steed": "^1.1.3",
     "tape": "^4.6.3"
   },
   "dependencies": {

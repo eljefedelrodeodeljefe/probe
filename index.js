@@ -29,3 +29,4 @@ module.exports.Probe = Probe
 module.exports.Ping = require('./lib/ping')
 module.exports.Scheduler = require('./lib/recurring').Scheduler
 module.exports.TimeRange = require('./lib/recurring').TimeRange
+module.exports.HTTPRequest = require('./lib/request')

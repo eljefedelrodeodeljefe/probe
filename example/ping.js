@@ -3,7 +3,9 @@ const Ping = require('../').Ping
 const config = {
   host: 'google.com',
   path:'/',
-  timeout: 20
+  port: 443,
+  // timeout: 20,
+  useHttps: true
 }
 
 const expectResponse = {
@@ -11,6 +13,7 @@ const expectResponse = {
 }
 
 const ping = new Ping()
+
 ping.start(config, expectResponse, (err, diff) => {
   if (err) {
     return console.error(err)

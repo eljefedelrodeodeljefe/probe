@@ -1,4 +1,4 @@
-const schedule = require('./lib/recurring')
+const Scheduler = require('./lib/recurring').Scheduler
 const EventEmitter = require('events')
 
 function patchEmitter (emitter, newEmitter) {
@@ -9,17 +9,21 @@ function patchEmitter (emitter, newEmitter) {
     // send them through the websocket received as a parameter
     oldEmitter.apply(emitter, arguments)
   }
-  this.schedule = schedule
 }
 
 class Probe extends EventEmitter {
   constructor () {
     super()
-    patchEmitter(schedule, this)
+    this.schedule = new Scheduler()
+    patchEmitter(this.schedule, this)
   }
 
   add (config, expects) {
-    schedule.add(config, expects)
+    this.schedule.add(config, expects)
+  }
+
+  abort () {
+    this.schedule.abort()
   }
 }
 

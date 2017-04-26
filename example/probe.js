@@ -1,3 +1,4 @@
+'use strict'
 const probe = require('../')
 
 const config = {

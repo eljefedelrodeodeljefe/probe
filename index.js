@@ -1,3 +1,4 @@
+'use strict'
 const Scheduler = require('./lib/recurring').Scheduler
 const EventEmitter = require('events')
 

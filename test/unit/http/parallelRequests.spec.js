@@ -1,3 +1,4 @@
+'use strict'
 const test = require('tape')
 const steed = require('steed')()
 const HTTPRequest = require('../../../').HTTPRequest

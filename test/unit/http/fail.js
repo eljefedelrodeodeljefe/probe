@@ -17,3 +17,20 @@ test('Will pass errors when they occur in the request', (t) => {
     t.end()
   })
 })
+
+test('Throws a timeout', (t) => {
+  t.plan(4)
+  const config = {
+    host: 'something.local',
+    path:'/'
+  }
+
+  const req = new HTTPRequest({timeout:  50})
+  req.start(config, (err, res) => {
+    t.ok(err)
+    t.equals(err.name, 'TimeoutError')
+    t.notOk(res)
+    t.pass()
+    t.end()
+  })
+})
